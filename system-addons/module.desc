@@ -2,6 +2,6 @@
 # Syntax is YAML 1.2
 ---
 type:       "view"
-name:       "systemaddons"
+name:       "system-addons"
 interface:  "pythonqt"
 script:     "main.py"   #assumed relative to the current directory
