@@ -1,0 +1,14 @@
+Source: calamares-system-addons-module
+Section: devel
+Priority: optional
+Maintainer: LliureX Team <lliurex@gva.es>
+Build-Depends: debhelper (>= 10)
+Standards-Version: 4.1.2
+Homepage: http://lliurex.net
+#Vcs-Git: https://github.com/lliurex/calamares-system-addons-module.git 
+
+Package: calamares-system-addons-module
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, calamares
+Description: Calamares module to enable LliureX system addons
+ Install Flash plugin and enable lliurex statistics
