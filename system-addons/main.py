@@ -183,7 +183,7 @@ class SystemAddonsViewStep:
 
     def modify_value(self,action,checkbox):
         self.configuration[action] = checkbox.isChecked()
-        calamares.global_storage.insert('systemaddons',all_packages)
+        calamares.global_storage.insert('systemaddons',self.configuration)
 
     def prettyName(self):
         return _("System Addons")
