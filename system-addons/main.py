@@ -217,7 +217,7 @@ class SystemAddonsViewStep:
 
     def jobs(self):
         # Returns a list of objects that implement Calamares::Job.
-        return []
+        return [SystemAddonsPQJob()]
 
     def widget(self):
         # Returns the base QWidget of this module's UI.
