@@ -1,3 +1,9 @@
+calamares-system-addons-module (0.1.2) bionic; urgency=medium
+
+  * Fix bug with method
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Thu, 30 May 2019 11:53:36 +0200
+
 calamares-system-addons-module (0.1.1) bionic; urgency=medium
 
   * 
