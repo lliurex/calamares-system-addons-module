@@ -166,7 +166,7 @@ class SystemAddonsViewStep:
         checkBox.setSizePolicy(sizePolicy)
         checkBox.setObjectName("checkBox")
         checkBox.setChecked(self.configuration[action])
-        checkBox.connect("clicked(bool)",lambda: self.modify_package(action,checkBox))
+        checkBox.connect("clicked(bool)",lambda: self.modify_value(action,checkBox))
         return checkBox
 
     def add_line(self):
