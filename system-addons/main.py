@@ -48,10 +48,10 @@ _ = gettext.gettext
 class SystemAddonsViewStep:
     def __init__(self):
 
-        self.configuration = calamares.global_storage.value('systemaddons')
-        if self.configuration is None:
-            self.configuration = {'flash':True,'statistics':True}
-            calamares.global_storage.insert('systemaddons',(self.configuration,))
+        
+        
+        self.configuration = {'flash':True,'statistics':True}
+        calamares.global_storage.insert('systemaddons',(self.configuration,))
         self.translations = {"flashname":"Flash support", "flashdescription": "Install Flash package", "statisticsname" : "Statistics usage","statisticsdescription" : "Send anonymous statistics usage to improve LliureX"}
         self.main_widget = QFrame()
         self.main_widget.setLayout(QVBoxLayout())
