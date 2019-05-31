@@ -284,8 +284,8 @@ class SystemAddonsPQJob:
 
     def exec(self):
         # As an example, we touch a file in the target root filesystem.
-        rmp = calamares.global_storage['rootMountPoint']
-        config = calamares.global_storage['systemaddons']
+        rmp = calamares.global_storage.value('rootMountPoint')
+        config = calamares.global_storage.value('systemaddons')
         if config['flash']:
             # install Flash by epic
             calamares.utils.target_env_call(['epic','-u','/usr/share/zero-lliurex-flash/flash.epi'])
