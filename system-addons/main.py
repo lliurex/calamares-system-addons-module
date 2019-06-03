@@ -215,7 +215,7 @@ class SystemAddonsViewStep:
 
     def jobs(self):
         # Returns a list of objects that implement Calamares::Job.
-        return [SystemAddonsPQJob()]
+        return []
 
     def widget(self):
         # Returns the base QWidget of this module's UI.
@@ -264,38 +264,3 @@ class SystemAddonsViewStep:
         self.flash_description_package.setText(_(self.translations['flashdescription']))
         self.statistics_name_package.setText(_(self.translations['statisticsname']))
         self.statistics_description_package.setText(_(self.translations['statisticsdescription']))
-
-
-
-class SystemAddonsPQJob:
-    def __init__(self):
-        pass
-
-    def pretty_name(self):
-        return _("System addons")
-
-    def pretty_description(self):
-        return _("This job install Flash or enable statistics")
-
-    def pretty_status_message(self):
-        return _("")
-
-    def exec(self):
-        # As an example, we touch a file in the target root filesystem.
-        rmp = calamares.global_storage.value('rootMountPoint')
-        config = calamares.global_storage.value('systemaddons')
-        if config['flash']:
-            # install Flash by epic
-            calamares.utils.target_env_call(['epic','-u','install','/usr/share/zero-lliurex-flash/flash.epi'])
-
-        analytics_path = "{rootmountpoint}/etc/lliurex-analytics/".format(rootmountpoint=rmp)
-        os.system("mkdir -p {ap}".format(ap=analytics_path))
-        if config['statistics']:
-            # Enable Statistics
-            with open(os.path.join(analytics_path,"status"),"w") as fd:
-                fd.write('yes\n')
-        else:
-            with open(os.path.join(analytics_path,"status"),"w") as fd:
-                fd.write('no\n')
-
-        return {'ok': True}
