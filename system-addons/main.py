@@ -286,7 +286,7 @@ class SystemAddonsPQJob:
         config = calamares.global_storage.value('systemaddons')
         if config['flash']:
             # install Flash by epic
-            calamares.utils.target_env_call(['epic','-u','/usr/share/zero-lliurex-flash/flash.epi'])
+            calamares.utils.target_env_call(['epic','-u','install','/usr/share/zero-lliurex-flash/flash.epi'])
 
         analytics_path = "{rootmountpoint}/etc/lliurex-analytics/".format(rootmountpoint=rmp)
         os.system("mkdir -p {ap}".format(ap=analytics_path))
