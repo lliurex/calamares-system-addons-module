@@ -1,3 +1,9 @@
+calamares-system-addons-module (0.1.7) bionic; urgency=medium
+
+  * Modify epic command
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Mon, 03 Jun 2019 09:55:07 +0200
+
 calamares-system-addons-module (0.1.6) bionic; urgency=medium
 
   * Fix initial config
