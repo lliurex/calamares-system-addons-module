@@ -1,0 +1,5 @@
+---
+type:       "job"
+name:       "system-addons-actions"
+interface:  "python"
+script:     "main.py"
