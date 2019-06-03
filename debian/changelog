@@ -1,3 +1,9 @@
+calamares-system-addons-module (0.1.8) bionic; urgency=medium
+
+  * Move plugin actions to python job because pythonqt not work correctly
+
+ -- Raul Rodrigo Segura <raurodse@gmail.com>  Mon, 03 Jun 2019 17:27:43 +0200
+
 calamares-system-addons-module (0.1.7) bionic; urgency=medium
 
   * Modify epic command
